@@ -3,7 +3,7 @@ require('date')
 def days_until_christmas(some_date=Date.today)
     next_christmas = Date.new(some_date.year, 12, 25)
 
-    puts next_christmas.class.methods
+    # puts next_christmas.class.methods Display all available methods on a class
 
     next_christmas = next_christmas.next_year if next_christmas < some_date
 
