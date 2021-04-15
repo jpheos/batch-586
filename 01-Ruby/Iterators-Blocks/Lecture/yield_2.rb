@@ -4,5 +4,5 @@ def beautify_name(first_name, last_name)
 end
 
 beautify_name("john", "doe") do |nimportequoi|
-    puts beautiful_name
+    puts nimportequoi
 end
