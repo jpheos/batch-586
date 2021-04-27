@@ -2,7 +2,10 @@ class View
   def display(recipes)
     puts "Here are your recipes:"
     recipes.each_with_index do |recipe, index|
-      puts "#{index + 1}- #{recipe.name} - #{recipe.description}"
+      recipe_marked = recipe.done ? 'X' : ' '
+      recipe_prep_time_string = recipe.prep_time.zero? ? "" : "(#{recipe.prep_time} min)"
+      recipe_info = "#{index + 1}-  [#{recipe_marked}] #{recipe.name} - #{recipe.rating}/5 #{recipe_prep_time_string}"
+      puts recipe_info
     end
   end
 
