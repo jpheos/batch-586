@@ -8,10 +8,11 @@ class PatientRepository
     @room_repository = room_repository
   end
 
-  def add_patient
+  def add_patient(patient)
     patient.id = @next_id
     @patients << patient
     next_id += 1
+    save_csv
   end
 
 
