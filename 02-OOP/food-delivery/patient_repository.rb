@@ -2,8 +2,8 @@ require "csv"
 class PatientRepository
   def initialize(csv_file_path, room_repository)
     @csv_file_path  = csv_file_path
-    load_csv if csv_file_path
     @next_id = 1
+    load_csv if csv_file_path
     @patients = []
     @room_repository = room_repository
   end
@@ -43,7 +43,7 @@ class PatientRepository
     patient.room = room # rehydratation
     @patients << patient
     end
-    @next_id = @patient.empty? ? 1 : @patients.last.id + 1 # set the next_id
+    @next_id = @patients.empty? ? 1 : @patients.last.id + 1 # set the next_id
   end
   end
 
