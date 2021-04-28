@@ -1,9 +1,11 @@
 # TODO: implement the router of your app.
 class Router
-  def initialize(meals_controller, customers_controller)
-    @running = true
-    @meals_controller = meals_controller
+  def initialize(meals_controller, customers_controller, session_controller, orders_controller)
+    @running              = true
+    @meals_controller     = meals_controller
     @customers_controller = customers_controller
+    @session_controller   = session_controller
+    @orders_controller    = orders_controller
     # TODO : initiliaze Session
   end
 
@@ -27,6 +29,8 @@ class Router
     when 4 then @customers_controller.add
     when 5 then @customers_controller.destroy
     when 6 then @customers_controller.edit
+    when 7 then @orders_controller.list_undelivered_orders
+    when 8 then @orders_controller.add
     when 9 then @running = false
     else
       puts "Try again..."
@@ -44,6 +48,8 @@ class Router
     puts "4 - Add a customer"
     puts "5 - delete a customer"
     puts "6 - edit a customer"
+    puts "7 - list order und"
+    puts "8 - add order und"
     puts "9 - Quit"
     print "> "
   end

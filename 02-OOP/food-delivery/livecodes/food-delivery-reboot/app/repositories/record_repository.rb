@@ -13,8 +13,8 @@ class RecordRepository
   end
 
   def find(index)
-    # @elements.find { |element| element.id == id }
-    @elements[index - 1]
+    @elements.find { |element| element.id == id }
+    # @elements[index - 1]
   end
 
   def create(element)
