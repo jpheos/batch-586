@@ -11,7 +11,6 @@ class MealsController
     # 1 recupérer tous les meals
     meals = @meal_repository.all
     #2 afficher
-    p meals
     @view.display(meals)
   end
 

@@ -4,12 +4,15 @@ class Router
     @running = true
     @meals_controller = meals_controller
     @customers_controller = customers_controller
+    # TODO : initiliaze Session
   end
 
   def run
-    while @running
+    @current_employee = @session_controller.sign_in
+    while @current_employee
       display_tasks
       choice = gets.chomp.to_i
+      print `clear`
       action(choice)
     end
   end
@@ -23,6 +26,7 @@ class Router
     when 3 then @customers_controller.list
     when 4 then @customers_controller.add
     when 5 then @customers_controller.destroy
+    when 6 then @customers_controller.edit
     when 9 then @running = false
     else
       puts "Try again..."
@@ -39,6 +43,7 @@ class Router
     puts "3 - List all customers"
     puts "4 - Add a customer"
     puts "5 - delete a customer"
+    puts "6 - edit a customer"
     puts "9 - Quit"
     print "> "
   end

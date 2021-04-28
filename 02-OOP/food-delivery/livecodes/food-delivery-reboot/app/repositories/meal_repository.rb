@@ -9,7 +9,6 @@ class MealRepository < RecordRepository
 
   def row_to_record(row)
     row[:id] = row[:id].to_i
-    row[:name] = row[:name]
     row[:price]  = row[:price].to_i
     Meal.new(row)
   end
