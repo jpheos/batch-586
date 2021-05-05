@@ -1,0 +1,75 @@
+/* TODO: design your profile with CSS */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(230, 230, 230);
+}
+
+h1, a {
+  color: #6C5FF5;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+h2 {
+  color: #a7d0cd;
+  font-size: 24px;
+}
+
+p {
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  font-size: 40px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card-white {
+  background-color: #FFF;
+  width: 720px;
+  margin: 24px auto;
+  padding: 36px;
+  text-align: center;
+}
+
+.avatar-rounded {
+  width: 116px;
+  border-radius: 50%;
+}
+
+.list-inline {
+  display: flex;
+  justify-content: center;
+}
+
+.list-inline li {
+  margin: 0 16px;
+}
+
+.btn-blue {
+  background-color: #fff;
+  border: 2px solid #6C5FF5;
+  padding: 8px 16px;
+  border-radius: 36px;
+}
+
+.btn-blue:hover {
+  background-color: #6C5FF5;
+  border: 2px solid #FFF;
+  color: #FFF;
+}
+
+#intro p {
+  margin-bottom: 32px;
+}
