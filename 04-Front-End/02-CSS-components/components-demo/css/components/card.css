@@ -1,0 +1,23 @@
+.category-card {
+  background-image: url('../../images/breakfast.jpg');
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.4);
+  padding: 40px 8px;
+}
+
+.product-card {
+  display: flex;
+  background-color: #FFF;
+  margin-bottom: 2rem;
+}
+
+.product-card img {
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  margin-right: 1rem;
+}

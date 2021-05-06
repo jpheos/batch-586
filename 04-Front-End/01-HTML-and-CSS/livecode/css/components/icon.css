@@ -1,0 +1,8 @@
+.icon-grey {
+  color: rgb(209, 209, 209);
+}
+
+.icon-grey:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
