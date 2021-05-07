@@ -1,0 +1,12 @@
+/* TODO: Build layout for campuses page */
+.cards-with-map {
+  display: flex;
+}
+
+#map {
+  margin-left: 24px;
+  height: 80vh;
+  position: sticky;
+  top: 0;
+}
+
