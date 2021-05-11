@@ -36,23 +36,22 @@ const allItemsArray = Array.from(allItems);
 // console.log(activeItem);
 
 const emailInput = document.querySelector('#email');
-emailInput.value = "clement.malfroy@gmail.com"
+emailInput.value = "clement.malfroy@gmail.com";
 
 const linkedinLink = document.querySelector('a');
 
-console.log(linkedinLink.attributes.href.value)
+console.log(linkedinLink.attributes.href.value);
 
-console.log(list.dataset.players.split(','))
+console.log(list.dataset.players.split(','));
 
-debugger
 
 list.addEventListener('click', (event) => {
-    console.log(event);
-    p.innerText += "Clement"
-    p.addEventListener('click', (event) => {
-        console.log("Tu as fais les choses dans le bon sens")
-    })
-    
-    // list.classList.toggle('red');
-    allItemsArray.forEach(item => item.innerText += "t")
+  console.log(event);
+  p.innerText += "Clement";
+  p.addEventListener('click', (event) => {
+    console.log("Tu as fais les choses dans le bon sens");
+  });
+
+  // list.classList.toggle('red');
+  allItemsArray.forEach(item => item.innerText += "t");
 });
