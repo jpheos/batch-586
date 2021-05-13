@@ -3,15 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <title>Playground - JavaScript 101</title>
-    <style>
-      .red {
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/select2/dist/css/select2.css">
   </head>
   <body>
+
+    <select class="select2" name="country">
+      <option value="AL">Alabama</option>
+      <option value="WY">Wyoming</option>
+    </select>
+
+    <textarea class="form-control" id="editor" rows="4"></textarea>
+    <div id="preview">
+
+    </div>
 
     <form id="search-movies" class="form-inline">
       <input id="keyword" type="text" class="form-control ml-auto mr-2" placeholder="Find movies">
