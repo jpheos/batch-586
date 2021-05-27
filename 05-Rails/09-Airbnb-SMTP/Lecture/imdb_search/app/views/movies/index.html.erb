@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <hr>
+      <%= form_tag movies_path, method: :get do %>
+        <div class="d-flex">
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a movie"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+
+      <hr>
+
+      <div id="movies">
+        <% @results.each do |result| %>
+          <h4>
+            <span class="badge badge-secondary"><%= result.class.name %></span>
+            <%= result.title %>
+
+            <% if result.is_a? Movie %>
+              (<%= result.director.full_name %>)
+            <% end %>
+
+          </h4>
+          <p><%= result.synopsis %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
